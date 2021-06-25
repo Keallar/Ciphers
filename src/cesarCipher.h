@@ -13,8 +13,8 @@ class CesarCipher : public QWidget
 {
     Q_OBJECT
 private:
-	unsigned int n_shift = 0;
-	unsigned int index_letter = 0;
+    unsigned int n_shift;
+    unsigned int index_letter;
     QString str_lang_up;
     QString str_lang_down;
     QString str_input;
@@ -30,7 +30,7 @@ private:
     QLabel* lbl_lang;
     QComboBox* cmb_lang;
     QLabel* lbl_shift;
-    QLineEdit* led_shift;
+    QComboBox* cmb_shift;
     QLabel* lbl_cipher;
     QComboBox* cmb_state_of_cipher;
     QPushButton* bt_run;
@@ -43,9 +43,13 @@ protected:
 public:
     CesarCipher(QWidget* mwdg = 0);
     virtual ~CesarCipher();
-	void inputShift();
-	void chooseLanguage();
-    QString encryption();
-    QString unEncryption();
+    void chooseLanguage();
+    void encryption();
+    void unEncryption();
+public slots:
+    void SlotButtonRun();
+    void SlotCmbChangeShift(int);
+    void SlotCmbChooseLang(int);
+    void SlotCmbEncrOrUnencr(int);
 };
 

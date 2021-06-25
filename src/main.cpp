@@ -1,17 +1,24 @@
 #include <QApplication>
 #include <QTabWidget>
+#include <windows.h>
 
 #include "cesarCipher.h"
 
 int main(int argc, char *argv[])
 {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
     QApplication a(argc, argv);
 
-    CesarCipher wdg_cesar_cipher;
+    QTabWidget main_tab;
+    CesarCipher* wdg_cesar_cipher = new CesarCipher;
 
-    wdg_cesar_cipher.setWindowTitle("Ciphers");
+    main_tab.addTab(wdg_cesar_cipher, "Cesar Cipher");
 
-    wdg_cesar_cipher.resize(1024, 480);
-    wdg_cesar_cipher.show();
+    main_tab.setWindowTitle("Ciphers");
+
+    main_tab.resize(1024, 480);
+    main_tab.show();
     return a.exec();
 }
