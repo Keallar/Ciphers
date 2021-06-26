@@ -14,8 +14,11 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     ted_input = new QTextEdit("Enter the text");
     ted_output = new QTextEdit;
     ted_output->setReadOnly(true);
+    bt_switch = new QPushButton("Switch");
+    connect(bt_switch, SIGNAL(clicked()), this, SLOT(SlotButtonSwitch()));
     QHBoxLayout* hlay_teds = new QHBoxLayout;
     hlay_teds->addWidget(ted_input);
+    hlay_teds->addWidget(bt_switch);
     hlay_teds->addWidget(ted_output);
 
     bt_run = new QPushButton("Run");
@@ -48,7 +51,7 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     str_list_cipher << "Encryption" << "Unenctyption";
     cmb_state_of_cipher = new QComboBox;
     cmb_state_of_cipher->addItems(str_list_cipher);
-        connect(cmb_state_of_cipher, SIGNAL(currentIndexChanged(int)), this, SLOT(SlotCmbEncrOrUnencr(int)));
+    connect(cmb_state_of_cipher, SIGNAL(currentIndexChanged(int)), this, SLOT(SlotCmbEncrOrUnencr(int)));
     QHBoxLayout* hlay_cipher = new QHBoxLayout;
     hlay_cipher->addWidget(lbl_cipher);
     hlay_cipher->addWidget(cmb_state_of_cipher);
@@ -78,6 +81,11 @@ void CesarCipher::SlotButtonRun()
     qDebug() << cmb_lang->currentText() << "\n";
     qDebug() << cmb_state_of_cipher->currentText() << "\n";
     ted_output->setText(str_output);
+}
+
+void CesarCipher::SlotButtonSwitch()
+{
+
 }
 
 void CesarCipher::SlotCmbChangeShift(int index)
@@ -132,31 +140,38 @@ void CesarCipher::encryption()
     {
         for (auto it1 = str_input.begin(); it1 < str_input.end(); ++it1)
         {
-            for (auto it2 = str_lang_up.begin(); it2 < str_lang_up.end(); ++it2)
+            if (*it1 != ' ')
             {
-                if (*it1 == *it2)
+                for (auto it2 = str_lang_up.begin(); it2 < str_lang_up.end(); ++it2)
                 {
-                    index_letter = std::distance(str_lang_up.begin(), it2);
-                    index_letter += n_shift;
-                    if (index_letter > str_lang_up.length())
+                    if (*it1 == *it2)
                     {
-                        index_letter = index_letter - str_lang_up.length();
+                        index_letter = std::distance(str_lang_up.begin(), it2);
+                        index_letter += n_shift;
+                        if (index_letter > str_lang_up.length())
+                        {
+                            index_letter = index_letter - str_lang_up.length();
+                        }
+                        str_output += str_lang_up.at(index_letter);
                     }
-                    str_output += str_lang_up.at(index_letter);
+                }
+                for (auto it2 = str_lang_down.begin(); it2 < str_lang_down.end(); ++it2)
+                {
+                    if (*it1 == *it2)
+                    {
+                        index_letter = std::distance(str_lang_down.begin(), it2);
+                        index_letter += n_shift;
+                        if (index_letter > str_lang_down.length())
+                        {
+                            index_letter = index_letter - str_lang_down.length();
+                        }
+                        str_output += str_lang_down.at(index_letter);
+                    }
                 }
             }
-            for (auto it2 = str_lang_down.begin(); it2 < str_lang_down.end(); ++it2)
+            else
             {
-                if (*it1 == *it2)
-                {
-                    index_letter = std::distance(str_lang_down.begin(), it2);
-                    index_letter += n_shift;
-                    if (index_letter > str_lang_down.length())
-                    {
-                        index_letter = index_letter - str_lang_down.length();
-                    }
-                    str_output += str_lang_down.at(index_letter);
-                }
+                str_output += ' ';
             }
         }
     }

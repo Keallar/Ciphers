@@ -27,6 +27,7 @@ private:
 private:
     QTextEdit* ted_input;
     QTextEdit* ted_output;
+    QPushButton* bt_switch;
     QLabel* lbl_lang;
     QComboBox* cmb_lang;
     QLabel* lbl_shift;
@@ -46,8 +47,9 @@ public:
     void chooseLanguage();
     void encryption();
     void unEncryption();
-public slots:
+private slots:
     void SlotButtonRun();
+    void SlotButtonSwitch();
     void SlotCmbChangeShift(int);
     void SlotCmbChooseLang(int);
     void SlotCmbEncrOrUnencr(int);

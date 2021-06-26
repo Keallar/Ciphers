@@ -1,14 +1,10 @@
 #include <QApplication>
 #include <QTabWidget>
-#include <windows.h>
 
 #include "cesarCipher.h"
 
 int main(int argc, char *argv[])
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-
     QApplication a(argc, argv);
 
     QTabWidget main_tab;
