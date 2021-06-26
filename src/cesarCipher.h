@@ -7,7 +7,7 @@
 #include <QLineEdit>
 #include <QTextDocument>
 #include <QLabel>
-#include <QTextEdit>
+#include <QPlainTextEdit>
 
 class CesarCipher : public QWidget
 {

@@ -11,7 +11,8 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     str_lang_up = STR_ALPHABET_ENG_UP;
     str_lang_down = STR_ALPHABET_ENG_DOWN;
 
-    ted_input = new QTextEdit("Enter the text");
+    ted_input = new QTextEdit;
+    ted_input->setPlaceholderText("Enter the text");
     ted_output = new QTextEdit;
     ted_output->setReadOnly(true);
     bt_switch = new QPushButton("Switch");
@@ -85,7 +86,12 @@ void CesarCipher::SlotButtonRun()
 
 void CesarCipher::SlotButtonSwitch()
 {
-
+    QString str_temp = str_output;
+    str_output.clear();
+    str_output = str_input;
+    ted_output->setText(str_output);
+    str_input.clear();
+    ted_input->setText(str_temp);
 }
 
 void CesarCipher::SlotCmbChangeShift(int index)
