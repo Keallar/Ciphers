@@ -11,6 +11,7 @@
 #include <QStringListModel>
 #include <QListView>
 
+#include "historymodel.h"
 
 class CesarCipher : public QWidget
 {
@@ -23,6 +24,8 @@ private:
     QString str_input;
     QString str_output;
 
+    HistoryModel* m_history;
+
     const QString STR_ALPHABET_RUS_UP = "ÀÁÂÃÄÅ¨ÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞß";
     const QString STR_ALPHABET_RUS_DOWN = "àáâãäå¸æçèéêëìíîïğñòóôõö÷øùúûüışÿ";
     const QString STR_ALPHABET_ENG_UP = "ABCDEFGHIKLMNOPQRSTVXYZ";
@@ -31,17 +34,14 @@ private:
     QTextEdit* ted_input;
     QTextEdit* ted_output;
     QPushButton* bt_switch;
-    QLabel* lbl_lang;
     QComboBox* cmb_lang;
-    QLabel* lbl_shift;
     QComboBox* cmb_shift;
-    QLabel* lbl_cipher;
     QComboBox* cmb_state_of_cipher;
     QPushButton* bt_run;
-    QLabel* lbl_history;
-    QStringList* str_list_history;
-    QStringListModel* slstm_history;
-    QListView* lst_view_history ;
+//    QLabel* lbl_history;
+//    QStringList* str_list_history;
+//    QStringListModel* slstm_history;
+//    QListView* lst_view_history ;
 protected:
     enum {NormalState = -1, Encryption, Unencryption};
     enum {None = -1, English, Russian};
@@ -54,7 +54,7 @@ public:
     void chooseLanguage();
     void encryption();
     void unEncryption();
-    void addHistory(const QString &str_history);
+    void addHistory(const QString &str_history_input, const QString &str_history_output);
 private slots:
     void SlotButtonRun();
     void SlotButtonSwitch();

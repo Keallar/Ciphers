@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
 
     QTabWidget main_tab;
     CesarCipher* wdg_cesar_cipher = new CesarCipher;
@@ -16,5 +16,5 @@ int main(int argc, char *argv[])
 
     main_tab.resize(1024, 480);
     main_tab.show();
-    return a.exec();
+    return app.exec();
 }

@@ -1,5 +1,7 @@
 #include <QLayout>
 #include <QStringList>
+#include <QFormLayout>
+#include <QSizePolicy>
 
 #include "cesarCipher.h"
 
@@ -29,17 +31,16 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     bt_run = new QPushButton("Run");
     connect(bt_run, SIGNAL(clicked()), this, SLOT(SlotButtonRun()));
 
-    lbl_lang = new QLabel("Language");
     QStringList str_list_lang;
     str_list_lang << "English" << "Russian";
     cmb_lang = new QComboBox;
     cmb_lang->addItems(str_list_lang);
     connect(cmb_lang, SIGNAL(currentIndexChanged(int)), this, SLOT(SlotCmbChooseLang(int)));
-    QHBoxLayout* hlay_lang = new QHBoxLayout;
-    hlay_lang->addWidget(lbl_lang);
-    hlay_lang->addWidget(cmb_lang);
+    QFormLayout* hlay_lang = new QFormLayout;
+    //hlay_lang->setLabelAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    hlay_lang->setSizeConstraint(SetMinimumSize);
+    hlay_lang->addRow("Language:", cmb_lang);
 
-    lbl_shift = new QLabel("Shift");
     QStringList str_list_shift;
     for (int i = 0; i < 34; ++i) {
         str_list_shift << QString::number(i);
@@ -47,38 +48,36 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     cmb_shift = new QComboBox;
     cmb_shift->addItems(str_list_shift);
     connect(cmb_shift, SIGNAL(currentIndexChanged(int)), this, SLOT(SlotCmbChangeShift(int)));
-    QHBoxLayout* hlay_shift = new QHBoxLayout;
-    hlay_shift->addWidget(lbl_shift);
-    hlay_shift->addWidget(cmb_shift);
+    QFormLayout* hlay_shift = new QFormLayout;
+    hlay_shift->addRow("Shift: ", cmb_shift);
 
-    lbl_cipher = new QLabel("(Un)encryption");
     QStringList str_list_cipher;
     str_list_cipher << "Encryption" << "Unenctyption";
     cmb_state_of_cipher = new QComboBox;
     cmb_state_of_cipher->addItems(str_list_cipher);
     connect(cmb_state_of_cipher, SIGNAL(currentIndexChanged(int)), this, SLOT(SlotCmbEncrOrUnencr(int)));
-    QHBoxLayout* hlay_cipher = new QHBoxLayout;
-    hlay_cipher->addWidget(lbl_cipher);
-    hlay_cipher->addWidget(cmb_state_of_cipher);
+    QFormLayout* hlay_cipher = new QFormLayout;
+    hlay_cipher->addRow("Encryption", cmb_state_of_cipher);
 
     QVBoxLayout* vlay_left_down = new QVBoxLayout;
     vlay_left_down->addLayout(hlay_lang);
     vlay_left_down->addLayout(hlay_shift);
     vlay_left_down->addLayout(hlay_cipher);
 
-    str_list_history = new QStringList;
-    slstm_history = new QStringListModel;
-    slstm_history->insertColumn(1);
-    lst_view_history = new QListView;
-    lst_view_history->setModel(slstm_history);
-    lbl_history = new QLabel("History");
-    QVBoxLayout* vlay_history = new QVBoxLayout;
-    vlay_history->addWidget(lbl_history);
-    vlay_history->addWidget(lst_view_history);
+
+//    str_list_history = new QStringList;
+//    slstm_history = new QStringListModel;
+//    slstm_history->insertColumn(1);
+//    lst_view_history = new QListView;
+//    lst_view_history->setModel(slstm_history);
+//    lbl_history = new QLabel("History");
+//    QVBoxLayout* vlay_history = new QVBoxLayout;
+//    vlay_history->addWidget(lbl_history);
+//    vlay_history->addWidget(lst_view_history);
 
     QHBoxLayout* hlay_down = new QHBoxLayout;
     hlay_down->addLayout(vlay_left_down);
-    hlay_down->addLayout(vlay_history);
+    //hlay_down->addLayout(vlay_history);
 
 
     QVBoxLayout* vlay_whole = new QVBoxLayout;
@@ -163,7 +162,7 @@ void CesarCipher::chooseLanguage()
 
 void CesarCipher::addHistory(const QString &str_history_input, const QString &str_history_output)
 {
-    str_list_history->push_back(str_history_input);
+    //str_list_history->push_back(str_history_input);
 }
 
 void CesarCipher::encryption()
