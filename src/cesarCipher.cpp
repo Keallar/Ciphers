@@ -2,6 +2,7 @@
 #include <QStringList>
 #include <QFormLayout>
 #include <QSizePolicy>
+#include <QGridLayout>
 
 #include "cesarCipher.h"
 
@@ -36,10 +37,9 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     cmb_lang = new QComboBox;
     cmb_lang->addItems(str_list_lang);
     connect(cmb_lang, SIGNAL(currentIndexChanged(int)), this, SLOT(SlotCmbChooseLang(int)));
-    QFormLayout* hlay_lang = new QFormLayout;
-    //hlay_lang->setLabelAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-    hlay_lang->setSizeConstraint(SetMinimumSize);
-    hlay_lang->addRow("Language:", cmb_lang);
+    QFormLayout* flay_lang = new QFormLayout;
+    flay_lang->addRow("Language:", cmb_lang);
+    flay_lang->setSpacing(8);
 
     QStringList str_list_shift;
     for (int i = 0; i < 34; ++i) {
@@ -48,8 +48,9 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     cmb_shift = new QComboBox;
     cmb_shift->addItems(str_list_shift);
     connect(cmb_shift, SIGNAL(currentIndexChanged(int)), this, SLOT(SlotCmbChangeShift(int)));
-    QFormLayout* hlay_shift = new QFormLayout;
-    hlay_shift->addRow("Shift: ", cmb_shift);
+    QFormLayout* flay_shift = new QFormLayout;
+    flay_shift->addRow("Shift: ", cmb_shift);
+    flay_shift->setSpacing(33);
 
     QStringList str_list_cipher;
     str_list_cipher << "Encryption" << "Unenctyption";
@@ -59,33 +60,24 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     QFormLayout* hlay_cipher = new QFormLayout;
     hlay_cipher->addRow("Encryption", cmb_state_of_cipher);
 
-    QVBoxLayout* vlay_left_down = new QVBoxLayout;
-    vlay_left_down->addLayout(hlay_lang);
-    vlay_left_down->addLayout(hlay_shift);
-    vlay_left_down->addLayout(hlay_cipher);
+    QGridLayout* vlay_interact = new QGridLayout;
+    QWidget* wdg_empty = new QWidget;
+    vlay_interact->addLayout(flay_lang, 0, 0);
+    vlay_interact->addWidget(wdg_empty, 0, 1);
+    vlay_interact->addWidget(wdg_empty, 0, 2);
+    vlay_interact->addLayout(flay_shift, 1, 0);
+    vlay_interact->addWidget(wdg_empty, 1, 1);
+    vlay_interact->addWidget(wdg_empty, 1, 2);
+    vlay_interact->addLayout(hlay_cipher, 2, 0);
+    vlay_interact->addWidget(wdg_empty, 2, 1);
+    vlay_interact->addWidget(wdg_empty, 2, 2);
 
+    QVBoxLayout* vlay_main = new QVBoxLayout;
+    vlay_main->addLayout(hlay_teds);
+    vlay_main->addWidget(bt_run);
+    vlay_main->addLayout(vlay_interact);
 
-//    str_list_history = new QStringList;
-//    slstm_history = new QStringListModel;
-//    slstm_history->insertColumn(1);
-//    lst_view_history = new QListView;
-//    lst_view_history->setModel(slstm_history);
-//    lbl_history = new QLabel("History");
-//    QVBoxLayout* vlay_history = new QVBoxLayout;
-//    vlay_history->addWidget(lbl_history);
-//    vlay_history->addWidget(lst_view_history);
-
-    QHBoxLayout* hlay_down = new QHBoxLayout;
-    hlay_down->addLayout(vlay_left_down);
-    //hlay_down->addLayout(vlay_history);
-
-
-    QVBoxLayout* vlay_whole = new QVBoxLayout;
-    vlay_whole->addLayout(hlay_teds);
-    vlay_whole->addWidget(bt_run);
-    vlay_whole->addLayout(hlay_down);
-
-    setLayout(vlay_whole);
+    setLayout(vlay_main);
 }
 
 CesarCipher::~CesarCipher() {}
