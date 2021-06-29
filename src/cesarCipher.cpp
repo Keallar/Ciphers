@@ -4,6 +4,10 @@
 #include "cesarCipher.h"
 
 //MAKE VALIDATION
+//MAKE CUSTOM ICONS
+//MAKE RUS LANGUAGE
+//MOVE BUTTONS AND COMBOBOXES
+//make spin box instead of combobox for shift
 
 CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     n_shift(0), index_letter(0), state_cipher(Encryption), state_language(English)
@@ -57,12 +61,30 @@ CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     hlay_cipher->addWidget(lbl_cipher);
     hlay_cipher->addWidget(cmb_state_of_cipher);
 
+    QVBoxLayout* vlay_left_down = new QVBoxLayout;
+    vlay_left_down->addLayout(hlay_lang);
+    vlay_left_down->addLayout(hlay_shift);
+    vlay_left_down->addLayout(hlay_cipher);
+
+    str_list_history = new QStringList;
+    slstm_history = new QStringListModel;
+    slstm_history->insertColumn(1);
+    lst_view_history = new QListView;
+    lst_view_history->setModel(slstm_history);
+    lbl_history = new QLabel("History");
+    QVBoxLayout* vlay_history = new QVBoxLayout;
+    vlay_history->addWidget(lbl_history);
+    vlay_history->addWidget(lst_view_history);
+
+    QHBoxLayout* hlay_down = new QHBoxLayout;
+    hlay_down->addLayout(vlay_left_down);
+    hlay_down->addLayout(vlay_history);
+
+
     QVBoxLayout* vlay_whole = new QVBoxLayout;
     vlay_whole->addLayout(hlay_teds);
     vlay_whole->addWidget(bt_run);
-    vlay_whole->addLayout(hlay_lang);
-    vlay_whole->addLayout(hlay_shift);
-    vlay_whole->addLayout(hlay_cipher);
+    vlay_whole->addLayout(hlay_down);
 
     setLayout(vlay_whole);
 }
@@ -81,7 +103,9 @@ void CesarCipher::SlotButtonRun()
     qDebug() << cmb_shift->currentText() << "\n";
     qDebug() << cmb_lang->currentText() << "\n";
     qDebug() << cmb_state_of_cipher->currentText() << "\n";
+
     ted_output->setText(str_output);
+    addHistory(str_input, str_output);
 }
 
 void CesarCipher::SlotButtonSwitch()
@@ -135,6 +159,11 @@ void CesarCipher::chooseLanguage()
         str_lang_up = STR_ALPHABET_RUS_UP;
         str_lang_down = STR_ALPHABET_RUS_DOWN;
     }
+}
+
+void CesarCipher::addHistory(const QString &str_history_input, const QString &str_history_output)
+{
+    str_list_history->push_back(str_history_input);
 }
 
 void CesarCipher::encryption()

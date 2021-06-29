@@ -8,6 +8,9 @@
 #include <QTextDocument>
 #include <QLabel>
 #include <QPlainTextEdit>
+#include <QStringListModel>
+#include <QListView>
+
 
 class CesarCipher : public QWidget
 {
@@ -35,6 +38,10 @@ private:
     QLabel* lbl_cipher;
     QComboBox* cmb_state_of_cipher;
     QPushButton* bt_run;
+    QLabel* lbl_history;
+    QStringList* str_list_history;
+    QStringListModel* slstm_history;
+    QListView* lst_view_history ;
 protected:
     enum {NormalState = -1, Encryption, Unencryption};
     enum {None = -1, English, Russian};
@@ -47,6 +54,7 @@ public:
     void chooseLanguage();
     void encryption();
     void unEncryption();
+    void addHistory(const QString &str_history);
 private slots:
     void SlotButtonRun();
     void SlotButtonSwitch();
