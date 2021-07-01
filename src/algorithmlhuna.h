@@ -11,8 +11,9 @@ class AlgorithmLhuna : public QWidget
 public:
     AlgorithmLhuna(QWidget* wdg = 0);
     virtual ~AlgorithmLhuna();
-    void runAlgorithm();
+    bool runAlgorithm();
 private:
+    QLabel* lbl_sequence_digits;
     QTextEdit* ted_include;
     QPushButton* bt_calculate;
     QLabel* lbl_last_digit;
