@@ -2,6 +2,7 @@
 #include <QTabWidget>
 
 #include "cesarCipher.h"
+#include "algorithmlhuna.h"
 
 void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
@@ -31,8 +32,10 @@ int main(int argc, char *argv[])
 
     QTabWidget main_tab;
     CesarCipher* wdg_cesar_cipher = new CesarCipher;
+    AlgorithmLhuna* wdg_alg_lhuna = new AlgorithmLhuna;
 
     main_tab.addTab(wdg_cesar_cipher, "Cesar Cipher");
+    main_tab.addTab(wdg_alg_lhuna, "Algorithm Lhuna");
 
     main_tab.setWindowTitle("Ciphers");
 

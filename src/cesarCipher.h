@@ -38,10 +38,7 @@ private:
     QComboBox* cmb_shift;
     QComboBox* cmb_state_of_cipher;
     QPushButton* bt_run;
-//    QLabel* lbl_history;
-//    QStringList* str_list_history;
-//    QStringListModel* slstm_history;
-//    QListView* lst_view_history ;
+
 protected:
     enum {NormalState = -1, Encryption, Unencryption};
     enum {None = -1, English, Russian};
