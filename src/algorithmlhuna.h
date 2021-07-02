@@ -12,13 +12,14 @@ class AlgorithmLhuna : public QWidget
 public:
     AlgorithmLhuna(QWidget* wdg = 0);
     virtual ~AlgorithmLhuna();
-    bool runAlgorithm();
+    void runAlgorithm();
 private:
     QLabel* lbl_sequence_digits;
     QTextEdit* ted_include;
     QPushButton* bt_calculate;
     QLabel* lbl_last_digit;
     QLabel* lbl_next_check_digit;
+    QLabel* lbl_error;
     int n_last_digit;
     int n_next_check_digit;
 private slots:
