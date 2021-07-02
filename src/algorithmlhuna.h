@@ -8,6 +8,7 @@
 
 class AlgorithmLhuna : public QWidget
 {
+    Q_OBJECT
 public:
     AlgorithmLhuna(QWidget* wdg = 0);
     virtual ~AlgorithmLhuna();
@@ -20,7 +21,7 @@ private:
     QLabel* lbl_next_check_digit;
     int n_last_digit;
     int n_next_check_digit;
-public slots:
+private slots:
     void SlotButtonRunAlg();
 };
 

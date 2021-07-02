@@ -2,7 +2,7 @@
 
 #include <QLayout>
 
-AlgorithmLhuna::AlgorithmLhuna(QWidget* wdg)
+AlgorithmLhuna::AlgorithmLhuna(QWidget* wdg): QWidget(wdg)
 {
     n_last_digit = 0;
     n_next_check_digit = 0;
@@ -23,7 +23,6 @@ AlgorithmLhuna::AlgorithmLhuna(QWidget* wdg)
     connect(bt_calculate, SIGNAL(clicked()), this, SLOT(SlotButtonRunAlg()));
     bt_calculate->setMaximumSize(100, 30);
     glay_teds->addWidget(bt_calculate, 2, 0);
-
     glay_teds->addWidget(wdg_empty, 3, 0);
 
     lbl_last_digit = new QLabel("FIRST");
@@ -47,10 +46,12 @@ AlgorithmLhuna::AlgorithmLhuna(QWidget* wdg)
     setMaximumSize(400, 250);
 }
 
-AlgorithmLhuna::~AlgorithmLhuna() {}
+AlgorithmLhuna::~AlgorithmLhuna()
+{}
 
 void AlgorithmLhuna::SlotButtonRunAlg()
 {
+    qDebug() << "I'm here";
     if (runAlgorithm()){
         QString str_temp_one = QString::number(n_last_digit);
         QString str_temp_two = QString::number(n_next_check_digit);

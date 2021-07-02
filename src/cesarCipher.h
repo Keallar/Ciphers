@@ -16,6 +16,13 @@
 class CesarCipher : public QWidget
 {
     Q_OBJECT
+public:
+    CesarCipher(QWidget* mwdg = 0);
+    virtual ~CesarCipher();
+    void chooseLanguage();
+    void encryption();
+    void unEncryption();
+    void addHistory(const QString &str_history_input, const QString &str_history_output);
 private:
     unsigned int n_shift;
     unsigned int index_letter;
@@ -45,13 +52,6 @@ protected:
 
     int state_cipher;
     int state_language;
-public:
-    CesarCipher(QWidget* mwdg = 0);
-    virtual ~CesarCipher();
-    void chooseLanguage();
-    void encryption();
-    void unEncryption();
-    void addHistory(const QString &str_history_input, const QString &str_history_output);
 private slots:
     void SlotButtonRun();
     void SlotButtonSwitch();
