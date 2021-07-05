@@ -78,7 +78,7 @@ void AlgorithmLhuna::runAlgorithm()
     int res = 0;
     while(n != 0)
     {
-        vec.push_back(n%10);
+        vec.push_back(n % 10);
         n /= 10;
         if (vec.back() == 0)
         {

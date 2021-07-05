@@ -1,6 +1,13 @@
 C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/moc_cesarCipher.cpp: C:/Users/evgen/source/Qt/Ciphers/src/cesarCipher.h \
   C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/moc_predefs.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/QAbstractListModel \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/QList \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/QObject \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/QRect \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/QSize \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/QSizeF \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/QString \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/QStringListModel \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qanystringview.h \
@@ -22,6 +29,7 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qdatastream.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qdebug.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qflags.h \
@@ -32,6 +40,7 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qhashfunctions.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qiodevice.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qiodevicebase.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qiterable.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qiterator.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qline.h \
@@ -51,6 +60,7 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qobjectdefs_impl.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qpair.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qpoint.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/qpointer.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qproperty.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qpropertyprivate.h \
@@ -68,6 +78,7 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qstringalgorithms.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qstringconverter.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qstringlist.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtCore/qstringlistmodel.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qstringliteral.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qstringmatcher.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qstringtokenizer.h \
@@ -85,15 +96,22 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.1.0/mingw81_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/QTextDocument \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/QTransform \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qabstracttextdocumentlayout.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qbitmap.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qbrush.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qcolor.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qcursor.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qevent.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qeventpoint.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qfont.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qfontdatabase.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qglyphrun.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qicon.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qimage.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qinputdevice.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qpalette.h \
@@ -101,28 +119,36 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qpicture.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qpixmap.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qpointingdevice.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qpolygon.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qrawfont.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qregion.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qrgb.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qscreen.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextcursor.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextformat.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextlayout.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextoption.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qtransform.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qvalidator.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qvector2d.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtGui/qvectornd.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.1.0/mingw81_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QComboBox \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QLabel \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QLineEdit \
+  C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QListView \
+  C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QPlainTextEdit \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QPushButton \
-  C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QTextEdit \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QWidget \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qabstractitemview.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qabstractspinbox.h \
@@ -130,6 +156,8 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qframe.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlineedit.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistview.h \
+  C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qplaintextedit.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qsizepolicy.h \
@@ -331,4 +359,5 @@ C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/Ciphers_autogen/UVLADIE3JM/mo
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
+  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/evgen/source/Qt/Ciphers/src/historymodel.h

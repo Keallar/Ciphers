@@ -193,9 +193,19 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/evgen/source/Qt/Ciphers/src/algorithmlhuna.h",
+			"MU",
+			"UVLADIE3JM/moc_algorithmlhuna.cpp"
+		],
+		[
 			"C:/Users/evgen/source/Qt/Ciphers/src/cesarCipher.h",
 			"MU",
 			"UVLADIE3JM/moc_cesarCipher.cpp"
+		],
+		[
+			"C:/Users/evgen/source/Qt/Ciphers/src/historymodel.h",
+			"MU",
+			"UVLADIE3JM/moc_historymodel.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -260,7 +270,9 @@
 	"SETTINGS_FILE" : "C:/Users/evgen/source/Qt/Ciphers/cmake-build-debug/CMakeFiles/Ciphers_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/Users/evgen/source/Qt/Ciphers/src/algorithmlhuna.cpp", "MU" ],
 		[ "C:/Users/evgen/source/Qt/Ciphers/src/cesarCipher.cpp", "MU" ],
+		[ "C:/Users/evgen/source/Qt/Ciphers/src/historymodel.cpp", "MU" ],
 		[ "C:/Users/evgen/source/Qt/Ciphers/src/main.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],

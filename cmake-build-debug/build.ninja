@@ -51,9 +51,25 @@ build CMakeFiles/Ciphers.dir/Ciphers_autogen/mocs_compilation.cpp.obj: CXX_COMPI
   OBJECT_DIR = CMakeFiles\Ciphers.dir
   OBJECT_FILE_DIR = CMakeFiles\Ciphers.dir\Ciphers_autogen
 
+build CMakeFiles/Ciphers.dir/src/algorithmlhuna.cpp.obj: CXX_COMPILER__Ciphers_Debug ../src/algorithmlhuna.cpp || cmake_object_order_depends_target_Ciphers
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_WIN32_WINNT=0x0601 -D_WIN64
+  DEP_FILE = CMakeFiles\Ciphers.dir\src\algorithmlhuna.cpp.obj.d
+  FLAGS = -g -Wno-error=invalid-offsetof -std=gnu++17
+  INCLUDES = -I. -I../ -ICiphers_autogen/include -isystem C:/Qt/6.1.0/mingw81_64/include/QtCore -isystem C:/Qt/6.1.0/mingw81_64/include -isystem C:/Qt/6.1.0/mingw81_64/mkspecs/win32-g++ -isystem C:/Qt/6.1.0/mingw81_64/include/QtWidgets -isystem C:/Qt/6.1.0/mingw81_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Ciphers.dir
+  OBJECT_FILE_DIR = CMakeFiles\Ciphers.dir\src
+
 build CMakeFiles/Ciphers.dir/src/cesarCipher.cpp.obj: CXX_COMPILER__Ciphers_Debug ../src/cesarCipher.cpp || cmake_object_order_depends_target_Ciphers
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_WIN32_WINNT=0x0601 -D_WIN64
   DEP_FILE = CMakeFiles\Ciphers.dir\src\cesarCipher.cpp.obj.d
+  FLAGS = -g -Wno-error=invalid-offsetof -std=gnu++17
+  INCLUDES = -I. -I../ -ICiphers_autogen/include -isystem C:/Qt/6.1.0/mingw81_64/include/QtCore -isystem C:/Qt/6.1.0/mingw81_64/include -isystem C:/Qt/6.1.0/mingw81_64/mkspecs/win32-g++ -isystem C:/Qt/6.1.0/mingw81_64/include/QtWidgets -isystem C:/Qt/6.1.0/mingw81_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Ciphers.dir
+  OBJECT_FILE_DIR = CMakeFiles\Ciphers.dir\src
+
+build CMakeFiles/Ciphers.dir/src/historymodel.cpp.obj: CXX_COMPILER__Ciphers_Debug ../src/historymodel.cpp || cmake_object_order_depends_target_Ciphers
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_WIN32_WINNT=0x0601 -D_WIN64
+  DEP_FILE = CMakeFiles\Ciphers.dir\src\historymodel.cpp.obj.d
   FLAGS = -g -Wno-error=invalid-offsetof -std=gnu++17
   INCLUDES = -I. -I../ -ICiphers_autogen/include -isystem C:/Qt/6.1.0/mingw81_64/include/QtCore -isystem C:/Qt/6.1.0/mingw81_64/include -isystem C:/Qt/6.1.0/mingw81_64/mkspecs/win32-g++ -isystem C:/Qt/6.1.0/mingw81_64/include/QtWidgets -isystem C:/Qt/6.1.0/mingw81_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Ciphers.dir
@@ -75,7 +91,7 @@ build CMakeFiles/Ciphers.dir/src/main.cpp.obj: CXX_COMPILER__Ciphers_Debug ../sr
 #############################################
 # Link the executable Ciphers.exe
 
-build Ciphers.exe: CXX_EXECUTABLE_LINKER__Ciphers_Debug CMakeFiles/Ciphers.dir/Ciphers_autogen/mocs_compilation.cpp.obj CMakeFiles/Ciphers.dir/src/cesarCipher.cpp.obj CMakeFiles/Ciphers.dir/src/main.cpp.obj | C$:/Qt/6.1.0/mingw81_64/lib/libQt6Widgets.a C$:/Qt/6.1.0/mingw81_64/lib/libQt6Gui.a C$:/Qt/6.1.0/mingw81_64/lib/libQt6Core.a || Ciphers_autogen Ciphers_autogen_timestamp_deps
+build Ciphers.exe: CXX_EXECUTABLE_LINKER__Ciphers_Debug CMakeFiles/Ciphers.dir/Ciphers_autogen/mocs_compilation.cpp.obj CMakeFiles/Ciphers.dir/src/algorithmlhuna.cpp.obj CMakeFiles/Ciphers.dir/src/cesarCipher.cpp.obj CMakeFiles/Ciphers.dir/src/historymodel.cpp.obj CMakeFiles/Ciphers.dir/src/main.cpp.obj | C$:/Qt/6.1.0/mingw81_64/lib/libQt6Widgets.a C$:/Qt/6.1.0/mingw81_64/lib/libQt6Gui.a C$:/Qt/6.1.0/mingw81_64/lib/libQt6Core.a || Ciphers_autogen Ciphers_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.1.0/mingw81_64/lib/libQt6Widgets.a  C:/Qt/6.1.0/mingw81_64/lib/libQt6Gui.a  C:/Qt/6.1.0/mingw81_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Ciphers.dir
@@ -135,7 +151,7 @@ build Ciphers_autogen/timestamp: CUSTOM_COMMAND C$:/Qt/6.1.0/mingw81_64/./bin/mo
 #############################################
 # Phony custom command for CMakeFiles\Ciphers_autogen_timestamp_deps
 
-build CMakeFiles/Ciphers_autogen_timestamp_deps: phony C$:/Qt/6.1.0/mingw81_64/bin/Qt6Widgets.dll C$:/Qt/6.1.0/mingw81_64/bin/Qt6Core.dll C$:/Qt/6.1.0/mingw81_64/./bin/moc.exe C$:/Qt/6.1.0/mingw81_64/./bin/uic.exe
+build CMakeFiles/Ciphers_autogen_timestamp_deps: phony C$:/Qt/6.1.0/mingw81_64/bin/Qt6Widgets.dll C$:/Qt/6.1.0/mingw81_64/./bin/uic.exe C$:/Qt/6.1.0/mingw81_64/./bin/moc.exe C$:/Qt/6.1.0/mingw81_64/bin/Qt6Core.dll
 
 
 #############################################

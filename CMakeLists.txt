@@ -27,6 +27,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
+#find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core5Compat REQUIRED)
+
 file (GLOB CXX_SOURES src/*.h src/*.cpp)
 
 set(PROJECT_SOURCES
@@ -51,6 +53,8 @@ else()
 endif()
 
 target_link_libraries(Ciphers PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+
+#target_link_libraries(Ciphers PRIVATE Qt${QT_VERSION_MAJOR}::Core5Compat )
 
 set_target_properties(Ciphers PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

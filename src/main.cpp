@@ -4,6 +4,8 @@
 #include "cesarCipher.h"
 #include "algorithmlhuna.h"
 
+//make message boxes for all tabs
+
 void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
     QByteArray localMsg = msg.toLocal8Bit();
