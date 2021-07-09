@@ -151,7 +151,7 @@ build Ciphers_autogen/timestamp: CUSTOM_COMMAND C$:/Qt/6.1.0/mingw81_64/./bin/mo
 #############################################
 # Phony custom command for CMakeFiles\Ciphers_autogen_timestamp_deps
 
-build CMakeFiles/Ciphers_autogen_timestamp_deps: phony C$:/Qt/6.1.0/mingw81_64/bin/Qt6Widgets.dll C$:/Qt/6.1.0/mingw81_64/./bin/uic.exe C$:/Qt/6.1.0/mingw81_64/./bin/moc.exe C$:/Qt/6.1.0/mingw81_64/bin/Qt6Core.dll
+build CMakeFiles/Ciphers_autogen_timestamp_deps: phony C$:/Qt/6.1.0/mingw81_64/bin/Qt6Widgets.dll C$:/Qt/6.1.0/mingw81_64/./bin/moc.exe C$:/Qt/6.1.0/mingw81_64/./bin/uic.exe C$:/Qt/6.1.0/mingw81_64/bin/Qt6Core.dll
 
 
 #############################################

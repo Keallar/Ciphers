@@ -3,6 +3,7 @@
 #include <QFormLayout>
 #include <QSizePolicy>
 #include <QGridLayout>
+#include <QPainter>
 
 #include "cesarCipher.h"
 
@@ -11,12 +12,15 @@
 //MAKE RUS LANGUAGE
 //MOVE BUTTONS AND COMBOBOXES
 //make spin box instead of combobox for shift
+//make message box for issues
 
 CesarCipher::CesarCipher(QWidget* mwdg): QWidget(mwdg),
     n_shift(0), index_letter(0), state_cipher(Encryption), state_language(English)
 {
     str_lang_up = STR_ALPHABET_ENG_UP;
     str_lang_down = STR_ALPHABET_ENG_DOWN;
+
+    QPainter* paint_main = new QPainter;
 
     ted_input = new QTextEdit;
     ted_input->setPlaceholderText("Enter the text");
